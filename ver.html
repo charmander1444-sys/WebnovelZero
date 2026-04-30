@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Volumen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header-app">
+    <button class="btn-volver" onclick="volver()">⬅ Volver</button>
+    <h1 id="titulo-arco"></h1>
+</header>
+
+<main class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div id="contenedor-volumenes"></div>
+    </aside>
+
+    <!-- LECTOR -->
+    <section class="lector">
+        <div id="visor">
+            <h2 id="titulo-volumen">Selecciona un volumen</h2>
+            <iframe id="pdfViewer"></iframe>
+        </div>
+    </section>
+
+    <!-- CAPÍTULOS -->
+    <aside class="sidebar-derecha">
+        <h3>Capítulos</h3>
+        <div id="panel-capitulos"></div>
+    </aside>
+
+</main>
+
+<script src="js/ver.js"></script>
+</body>
+</html>

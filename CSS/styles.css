@@ -1,0 +1,354 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #0f0f1a, #090910);
+    color: #fff;
+}
+
+/* ===== HEADER GLOBAL ===== */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(20, 20, 40, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: #a855f7;
+    font-size: 2rem;
+}
+
+/* ===== BOTONES ===== */
+button {
+    background: linear-gradient(45deg, #7c3aed, #9333ea);
+    border: none;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 0.85rem;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* ===== TAGS ===== */
+.scans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.tag-scan {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(124,58,237,0.2);
+    border: 1px solid #7c3aed;
+    color: #c4b5fd;
+    text-decoration: none;
+}
+
+.tag-scan:hover {
+    background: #7c3aed;
+    color: white;
+}
+
+/*INDEX*/
+/* ===== GRID PRINCIPAL ===== */
+#contenedor-arcos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 15px;
+}
+
+/* ===== CARD ===== */
+.arco {
+    background: rgba(28, 28, 43, 0.7);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    backdrop-filter: blur(8px);
+}
+
+.arco:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEN */
+.arco img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+/* CONTENIDO */
+.arco-content {
+    padding: 10px;
+}
+
+.arco-content h3 {
+    font-size: 1rem;
+    margin-bottom: 3px;
+}
+
+.arco-content p {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+/*Responsive index*/
+/* ===== MOBILE GRANDES (1080x2400 aprox) ===== */
+@media (max-width: 900px) {
+
+    #contenedor-arcos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .arco img {
+        height: 260px;
+    }
+
+    .arco-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .arco-content p {
+        font-size: 0.75rem;
+    }
+
+    button {
+        font-size: 0.75rem;
+        padding: 6px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* MÓVIL MÁS PEQUEÑO */
+@media (max-width: 500px) {
+
+    #contenedor-arcos {
+        grid-template-columns: 1fr;
+    }
+
+    .arco img {
+        height: 220px;
+    }
+}
+
+/*HTML LECTOR*/
+/* ===== HEADER APP ===== */
+.header-app {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(20, 20, 40, 0.9);
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+/* ===== SIDEBAR IZQUIERDA ===== */
+.sidebar {
+    width: 300px;
+    background: rgba(15, 15, 30, 0.95);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    overflow-y: auto;
+    padding: 15px;
+}
+
+/* ===== SIDEBAR DERECHA ===== */
+.sidebar-derecha {
+    width: 280px;
+    background: rgba(15, 15, 30, 0.95);
+    border-left: 1px solid rgba(255,255,255,0.1);
+    padding: 15px;
+    overflow-y: auto;
+}
+
+/* ===== LECTOR ===== */
+.lector {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+/* ===== VISOR PDF ===== */
+#visor {
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#titulo-volumen {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #c084fc;
+}
+
+iframe {
+    flex: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ===== VOLUMENES ===== */
+.volumen-card {
+    background: rgba(30, 30, 50, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.volumen-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    cursor: pointer;
+    background: rgba(50, 50, 80, 0.6);
+}
+
+.volumen-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.volumen-body.activo {
+    max-height: 500px;
+    padding: 15px;
+}
+
+/* ===== CAPITULOS ===== */
+.capitulos {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.capitulo {
+    padding: 6px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.capitulo-item {
+    padding: 8px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+
+.capitulo-item:hover {
+    background: rgba(124,58,237,0.2);
+}
+
+/*RESPONSIVE LECTOR*/
+/* ===== MOBILE ALTO (1080x2400) ===== */
+@media (max-width: 900px) {
+
+    .layout {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    /* Sidebar superior (volúmenes) */
+    .sidebar {
+        width: 100%;
+        max-height: 180px;
+        overflow-y: auto;
+        padding: 10px;
+    }
+
+    /* Sidebar capítulos (debajo del visor) */
+    .sidebar-derecha {
+        width: 100%;
+        max-height: 150px;
+        padding: 10px;
+    }
+
+    /* Lector ocupa MÁS espacio */
+    .lector {
+        flex: 1;
+        padding: 10px;
+    }
+
+    #visor {
+        flex: 1;
+        padding: 8px;
+    }
+
+    iframe {
+        height: 55vh;
+    }
+
+    #titulo-volumen {
+        font-size: 1rem;
+    }
+
+    .capitulo-item {
+        font-size: 0.75rem;
+        padding: 6px;
+    }
+
+    .volumen-header h3 {
+        font-size: 0.9rem;
+    }
+}
+
+.btn-volver {
+    width: auto;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(124,58,237,0.2);
+    border: 1px solid #7c3aed;
+}
+
+.btn-volver:hover {
+    background: #7c3aed;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    background: rgba(20, 20, 40, 0.8);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 20px;
+    color: #c4b5fd;
+}
+
+.footer strong {
+    color: #a855f7;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
