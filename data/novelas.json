@@ -348,10 +348,6 @@
                 "link": "#"
             },
              {
-                "nombre": "Fhol",
-                "link": "#"
-            },
-             {
                 "nombre": "Nexudus",
                 "link": "#"
             }
@@ -550,7 +546,7 @@
         "volumenes": "Volumen 26,27,28,29,30,31,32,33",
         "scans": [
              {
-                "nombre": "Fhol",
+                "nombre": "Natski-san",
                 "link": "#"
             },
              {
@@ -1210,7 +1206,7 @@
         "volumenes": "Volumen 39,40,41,42,43",
         "scans": [
              {
-                "nombre": "Ezzocadnerrey.",
+                "nombre": "Recuerdos de Beako",
                 "link": "#"
             }
         ],
